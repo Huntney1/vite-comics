@@ -72,16 +72,14 @@ export default {
       <!-- attivo lista nav bar -->
       <nav>
         <ul>
-          <li v-for="(item, index) in menu" :key="index"  >
+          <li v-for="(item, index) in menu" :key="index">
             <a :href="item.url" :class="item.active ? 'active' : ''"></a>
             {{ item.label }}
           </li>
         </ul>
       </nav>
     </div>
-    <div class="content_cont">
-        <div class="contet_title">  ...content goes here ...  </div>
-    </div>
+   
   </header>
 </template>
 
@@ -108,35 +106,21 @@ header {
     @include display-flex-sb;
     margin: 25px 10px;
     list-style: none;
+  }
 
-    
-}
-
-li a{
+  li a {
     margin: 6px;
     line-height: 1px;
     text-decoration: none;
     transition: border 0.3s;
-    
-    &.active, &:hover{
-        color: blue;
-        border-bottom: 4px solid blue;
-    }
-}
+  }
+  li.active,
+  li:hover {
+    color: blue;
+    border-bottom: 3px solid blue;
+    cursor: pointer;
+  }
 
-.content_cont {
-    height: 100px;
-    background-color: rgb(36, 34, 34);
-    display: flex;
-    align-items: center;
-
-
-    .contet_title {
-        color: white;
-       
-    }
-}
-
-
+  
 }
 </style>

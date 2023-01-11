@@ -1,13 +1,13 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
- import AppContent from "./components/AppContent.vue";
-/*import AppFooter from "./components/AppFooter.vue"; */
+import AppContent from "./components/AppContent.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   components: {
     AppHeader,
     AppContent,
-    /* AppFooter, */
+    AppFooter,
   },
 };
 </script>
@@ -16,12 +16,11 @@ export default {
   <div>
     <AppHeader />
     <AppContent />
-   <!--  <AppFooter /> -->
+    <AppFooter />
   </div>
 </template>
 
 
 <style lang="scss">
-@use './styles/partials/generals.scss' as *;
-
+@use "./styles/partials/generals.scss" as *;
 </style>
