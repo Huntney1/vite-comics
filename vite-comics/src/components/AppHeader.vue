@@ -119,7 +119,7 @@ export default {
           }
         }
         a:hover {
-          color: $primary;
+          border-bottom: $primary;
         }
       }
     }
