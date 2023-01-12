@@ -60,7 +60,7 @@ export default {
 
 <template>
   <footer>
-    <div class="footer-bar">
+    <div class="footer-section">
       <div class="container">
         <ul>
           <li v-for="(object, index) in icone" :key="index">
