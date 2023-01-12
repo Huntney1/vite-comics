@@ -63,11 +63,11 @@ export default {
 
 
 <template>
-  <header>
-    <div class="continer">
+  <header class="continer">
+    <div >
       <!-- logo dc -->
       <a href="/" class="logo">
-        <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="logo_dc" />
+        <img :src="`/img/dc-logo.png${img}`" alt="logo_dc" />
       </a>
       <!-- attivo lista nav bar -->
       <nav>
@@ -79,14 +79,16 @@ export default {
         </ul>
       </nav>
     </div>
-   
+    <div class="content_cont">
+      <div class="contet_title">...content goes here ...</div>
+    </div>
   </header>
 </template>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
-@use "../styles/partials/generals" as *;
+
 
 header {
   text-align: center;
@@ -97,8 +99,7 @@ header {
   }
 
   div {
-    display: flex;
-    justify-content: space-evenly;
+    @include d-flex-bt;
     align-items: center;
   }
 
@@ -111,16 +112,27 @@ header {
   li a {
     margin: 6px;
     line-height: 1px;
-    text-decoration: none;
-    transition: border 0.3s;
+   
+    border-bottom: 3px solid white;
   }
   li.active,
   li:hover {
-    color: blue;
-    border-bottom: 3px solid blue;
+    color: $primary;
+    border-bottom: 3px solid $primary;
     cursor: pointer;
   }
 
-  
+  .content_cont {
+    height: 100px;
+    margin-top: 5px;
+    background-color: rgb(36, 34, 34);
+    display: flex;
+    align-items: center;
+
+    .contet_title {
+      color: white;
+      text-transform: uppercase;
+    }
+  }
 }
 </style>

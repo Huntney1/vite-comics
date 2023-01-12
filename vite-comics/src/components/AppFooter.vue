@@ -49,11 +49,11 @@ export default {
       ],
     };
   },
-  methods: {
+ /* methods: {
     getImagePath: function (img) {
       return `../assets/vue-dc-comics-1/img${img}`;
     },
-  },
+  },*/
 };
 </script>
 
@@ -64,8 +64,8 @@ export default {
       <div class="container">
         <ul>
           <li v-for="(object, index) in icone" :key="index">
-            <a :href="item.url" :class="item.active ? 'active' : ''">
-              <img :src="imgPath(object.img)" alt="logo" />
+            <a :href="object.url" :class="object.active ? 'active' : ''">
+              <img :src="`/img/${object.image}`" alt="logo" />
               <span>{{ object.description }}</span>
             </a>
           </li>
@@ -128,7 +128,7 @@ export default {
       </div>
     </div>
 
-    <div class="social">
+   <!--  <div class="social">
       <div class="col-but">
         <button class="footer-button">Sign-up now!</button>
       </div>
@@ -140,7 +140,7 @@ export default {
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </footer>
 </template>
 
@@ -158,4 +158,4 @@ export default {
   display: flex;
   align-items: center;
 }
-</style>
+</style> 
