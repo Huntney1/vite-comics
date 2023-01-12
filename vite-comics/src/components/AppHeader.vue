@@ -67,7 +67,7 @@ export default {
     <div >
       <!-- logo dc -->
       <a href="/" class="logo">
-        <img :src="`/img/dc-logo.png${img}`" alt="logo_dc" />
+        <img src="/img/dc-logo.png" alt="logo_dc" />
       </a>
       <!-- attivo lista nav bar -->
       <nav>

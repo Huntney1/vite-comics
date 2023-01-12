@@ -65,7 +65,7 @@ export default {
         <ul>
           <li v-for="(object, index) in icone" :key="index">
             <a :href="object.url" :class="object.active ? 'active' : ''">
-              <img :src="`/img/${object.image}`" alt="logo" />
+              <img :src="`/img/${object.label}`" alt="logo" />
               <span>{{ object.description }}</span>
             </a>
           </li>
