@@ -64,9 +64,10 @@ export default {
 
 <template>
   <header class="continer">
-    <div >
+    <!-- NavBar -->
+    <div class="navbar">
       <!-- logo dc -->
-      <a href="/" class="logo">
+      <a href="#" class="logo">
         <img src="/img/dc-logo.png" alt="logo_dc" />
       </a>
       <!-- attivo lista nav bar -->
@@ -79,9 +80,6 @@ export default {
         </ul>
       </nav>
     </div>
-    <div class="content_cont">
-      <div class="contet_title">...content goes here ...</div>
-    </div>
   </header>
 </template>
 
@@ -89,49 +87,41 @@ export default {
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 
+.navbar {
+  @include d-flex-sb;
+  height: 150px;
+  align-items: center;
+  margin: 1em 0;
 
-header {
-  text-align: center;
+  nav {
+    @include d-flex-cent;
+    height: 100%;
 
-  img {
-    width: 50px;
-    margin-top: 14px;
-  }
+    ul {
+      height: 100%;
+      display: flex;
+      list-style: none;
 
-  div {
-    @include d-flex-bt;
-    align-items: center;
-  }
+      li {
+        @include d-flex-cent;
+        height: 100%;
+        padding: 10px;
+        line-height: 1px;
+        border-bottom: 3px solid white;
+        transition: border 0.3s;
+        &.active {
+          /* color: $primary; */
+          border-bottom: $primary;
+          cursor: pointer;
 
-  ul {
-    @include display-flex-sb;
-    margin: 25px 10px;
-    list-style: none;
-  }
-
-  li a {
-    margin: 6px;
-    line-height: 1px;
-   
-    border-bottom: 3px solid white;
-  }
-  li.active,
-  li:hover {
-    color: $primary;
-    border-bottom: 3px solid $primary;
-    cursor: pointer;
-  }
-
-  .content_cont {
-    height: 100px;
-    margin-top: 5px;
-    background-color: rgb(36, 34, 34);
-    display: flex;
-    align-items: center;
-
-    .contet_title {
-      color: white;
-      text-transform: uppercase;
+          a {
+            color: $primary;
+          }
+        }
+        a:hover {
+          color: $primary;
+        }
+      }
     }
   }
 }

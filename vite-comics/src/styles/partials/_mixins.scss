@@ -1,11 +1,18 @@
-@mixin display-flex-sb {
+@mixin d-flex-sb {
     display: flex;
     justify-content: space-between;
-    text-align: center;
-    align-items: center;
+}
+@mixin d-flex-sa {
+    display: flex;
+    justify-content: space-around;
 }
 
-@mixin d-flex-bt{
+@mixin d-flex-ev{
     display: flex;
     justify-content: space-evenly;
+}
+
+@mixin d-flex-cent{
+    display: flex;
+    align-items: center;
 }
