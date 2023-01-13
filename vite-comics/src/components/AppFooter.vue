@@ -55,7 +55,7 @@ export default {
 
 <template>
   <footer>
-    <div class="container-icon">
+    <div class="top-footer">
       <div class="container">
         <div class="col">
           <div v-for="(object, index) in icone" :key="index">
@@ -67,60 +67,63 @@ export default {
         </div>
       </div>
     </div>
-    <div class="cols cont_list">
-      <div class="footer-links">
-        <h4>Dc Comics</h4>
-        <ul>
-          <li><a href="#">Characters</a></li>
-          <li><a href="#">Comics</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">TV</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
-      </div>
+    <div class="main-footer">
+      <div class="container">
+        <div class="footer-sx">
+          <div class="footer-links">
+            <h4>Dc Comics</h4>
+            <ul>
+              <li><a href="#">Characters</a></li>
+              <li><a href="#">Comics</a></li>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">TV</a></li>
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div>
 
-      <div class="footer-links">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#">Shop DC</a></li>
-          <li><a href="#">Shop DC Collectibles</a></li>
-        </ul>
-      </div>
+          <div class="footer-links">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">Shop DC</a></li>
+              <li><a href="#">Shop DC Collectibles</a></li>
+            </ul>
+          </div>
 
-      <div class="footer-links">
-        <h4>DC</h4>
-        <ul>
-          <li><a href="#">Temos Of Use</a></li>
-          <li><a href="#">Privacy policy (New)</a></li>
-          <li><a href="#">Ad Choices</a></li>
-          <li><a href="#">Advertising</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Subscriptions</a></li>
-          <li><a href="#">Talent Workshops</a></li>
-          <li><a href="#">CPSC Cerrificates</a></li>
-          <li><a href="#">Ratings</a></li>
-          <li><a href="#">Shop Help</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
+          <div class="footer-links">
+            <h4>Dc</h4>
+            <ul>
+              <li><a href="#">Temos Of Use</a></li>
+              <li><a href="#">Privacy policy (New)</a></li>
+              <li><a href="#">Ad Choices</a></li>
+              <li><a href="#">Advertising</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Subscriptions</a></li>
+              <li><a href="#">Talent Workshops</a></li>
+              <li><a href="#">CPSC Cerrificates</a></li>
+              <li><a href="#">Ratings</a></li>
+              <li><a href="#">Shop Help</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
 
-      <div class="footer-links">
-        <h4>SITES</h4>
-        <ul>
-          <li><a href="#">DC</a></li>
-          <li><a href="#">MAD Magazine</a></li>
-          <li><a href="#">DC Kids</a></li>
-          <li><a href="#">DC Universe</a></li>
-          <li><a href="#">DC Power Visa</a></li>
-        </ul>
+          <div class="footer-links">
+            <h4>Sites</h4>
+            <ul>
+              <li><a href="#">DC</a></li>
+              <li><a href="#">MAD Magazine</a></li>
+              <li><a href="#">DC Kids</a></li>
+              <li><a href="#">DC Universe</a></li>
+              <li><a href="#">DC Power Visa</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="dc_bg">
+          <img src="/img/dc-logo-bg.png" alt="dc_logo" />
+        </div> -->
       </div>
-
-      <div class="dc_bg">
-        <img src="../assets/vue-dc-comics-1/img/dc-logo-bg.png" alt="dc_logo" />
-      </div>
-    </div> 
+    </div>
 
     <!--  <div class="social">
       <div class="col-but">
@@ -142,10 +145,10 @@ export default {
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 
-.container-icon {
+/* Header footer (parte bg_blue) */
+.top-footer {
   background-color: $primary;
   padding: 1em 0;
-
   .col {
     width: 100%;
     @include d-flex-cent;
@@ -162,4 +165,40 @@ export default {
     }
   }
 }
+
+/* Main Section */
+.main-footer {
+  background-image: url("/img/footer-bg.jpg");
+  background-size: cover;
+
+  .container {
+    display: flex;
+    background-image: url("/img/dc-logo-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    .footer-sx {
+      display: flex;
+      width: 30%;
+    }
+    .footer-links {
+      color: white;
+      margin: 1em 0.6em;
+
+      ul {
+        list-style: none;
+        li{
+          padding: 5px 0;
+          a{
+            color:grey;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* .dc_bg{
+  width: 70%;
+} */
 </style> 
