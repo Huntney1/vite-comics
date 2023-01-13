@@ -191,14 +191,13 @@ export default {
           a{
             color:grey;
           }
-        }
-        
+        } 
       }
     }
+    /* .dc_bg{
+  width: 70%;
+} */
   }
 }
 
-/* .dc_bg{
-  width: 70%;
-} */
 </style> 
