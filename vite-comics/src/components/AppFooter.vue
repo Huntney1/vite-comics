@@ -49,30 +49,24 @@ export default {
       ],
     };
   },
- /* methods: {
-    getImagePath: function (img) {
-      return `../assets/vue-dc-comics-1/img${img}`;
-    },
-  },*/
 };
 </script>
 
 
 <template>
   <footer>
-    <div class="footer-section">
+    <div class="container-icon">
       <div class="container">
-        <ul>
-          <li v-for="(object, index) in icone" :key="index">
+        <div class="col">
+          <div v-for="(object, index) in icone" :key="index">
             <a :href="object.url" :class="object.active ? 'active' : ''">
               <img :src="`/img/${object.label}`" alt="logo" />
               <span>{{ object.description }}</span>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class="cols cont_list">
       <div class="footer-links">
         <h4>Dc Comics</h4>
@@ -126,9 +120,9 @@ export default {
       <div class="dc_bg">
         <img src="../assets/vue-dc-comics-1/img/dc-logo-bg.png" alt="dc_logo" />
       </div>
-    </div>
+    </div> 
 
-   <!--  <div class="social">
+    <!--  <div class="social">
       <div class="col-but">
         <button class="footer-button">Sign-up now!</button>
       </div>
@@ -144,18 +138,28 @@ export default {
   </footer>
 </template>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 
-.footer-bar {
-  padding: 2em 5em;
-  background-color: #0282f9;
-  width: 100%;
-}
+.container-icon {
+  background-color: $primary;
+  padding: 1em 0;
 
-.link-flex {
-  display: flex;
-  align-items: center;
+  .col {
+    width: 100%;
+    @include d-flex-cent;
+    justify-content: space-around;
+
+    img {
+      width: 50px;
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+    span {
+      color: white;
+    }
+  }
 }
 </style> 

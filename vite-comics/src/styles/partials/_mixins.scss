@@ -1,7 +1,10 @@
+/* mixin header */
+
 @mixin d-flex-sb {
     display: flex;
     justify-content: space-between;
 }
+
 @mixin d-flex-sa {
     display: flex;
     justify-content: space-around;
@@ -14,5 +17,16 @@
 
 @mixin d-flex-cent{
     display: flex;
+    align-items: center;
+}
+
+/* mixin content */
+
+
+/* mixin footer */
+@mixin flx-sb-cent{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
     align-items: center;
 }
