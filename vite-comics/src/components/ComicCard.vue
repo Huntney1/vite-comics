@@ -5,14 +5,14 @@
         </script>
 <template lang="">
     
-        <div class="comics-card">
+        <!-- <div class="comics-card">
             <div class="thumb-container">
                 <img :src="comic.thumb" class="thumb" :alt="comic.series">
             </div>
              <div class="title-container"> 
                 <h4>{{comic.series}}</h4>
             </div>
-        </div>
+        </div> -->
     
 </template>
 <style lang="scss" scoped>

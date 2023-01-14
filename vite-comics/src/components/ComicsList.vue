@@ -1,9 +1,8 @@
 <script>
 import comicsData from "../assets/data/dc-comics.json";
-import AppJumbotron from "./AppJumbotron.vue";
+
 export default {
-  name: "AppContent",
-  AppJumbotron,
+  name: "ComicsList",
   data() {
     return {
       comics: comicsData,
@@ -22,16 +21,16 @@ export default {
           </h2>
         </div>
       </div>
-      <div class="container">
+      <!-- <div class="container">
         <div class="comics-container">
-          <dvi class="comics-card" v-for="(comics, index) in comics":key="index" >
+          <dvi class="comics-card" v-for="(comics, index) in comics" :key="index" >
             <div class="thumb-container">
               <img :src="comic.thumb" class="thumb" :alt="comic.series">
               <h4>{{comic.series}}</h4>
             </div>
           </dvi>
-            </div>
-      </div>
+        </div>
+      </div> -->
     </div>
 </template>
 
@@ -43,21 +42,19 @@ export default {
   background-color: black;
 }
 
-.upper-title{
+.upper-title {
   position: relative;
 
-
-.title{
-  width: 250px;
-  text-transform: uppercase;
-  background-color: $primary;
-  padding: 15px;
-  text-align: center;
-  color:white;
-  position:absolute;
-  top: -25px;
-  border: 1px solid black;
+  .title {
+    width: 250px;
+    text-transform: uppercase;
+    background-color: $primary;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: -25px;
+    border: 1px solid black;
+  }
 }
-}
-
 </style>

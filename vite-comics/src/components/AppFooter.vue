@@ -166,14 +166,14 @@ export default {
   }
 }
 
-/* Main Section */
+/* Main Footer Section */
 .main-footer {
   background-image: url("/img/footer-bg.jpg");
   background-size: cover;
 
   .container {
     display: flex;
-    background-image: url("/img/dc-logo-bg.jpg");
+    background-image: url("/img/dc-logo-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     .footer-sx {
@@ -182,21 +182,24 @@ export default {
     }
     .footer-links {
       color: white;
-      margin: 1em 0.6em;
+      margin: 2em 0.6em;
+
+      h4 {
+        text-transform: uppercase;
+      }
 
       ul {
         list-style: none;
+        padding-bottom: 10px;
         li{
           padding: 5px 0;
           a{
             color:grey;
+            font-size: 15px;
           }
         } 
       }
     }
-    /* .dc_bg{
-  width: 70%;
-} */
   }
 }
 
