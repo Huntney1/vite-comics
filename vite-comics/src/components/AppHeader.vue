@@ -89,9 +89,10 @@ export default {
 
 .navbar {
   @include d-flex-sb;
-  height: 150px;
   align-items: center;
-  margin: 1em 0;
+
+  height: 125px;
+  margin: 1em 0 0 0;
 
   nav {
     @include d-flex-cent;
@@ -106,20 +107,24 @@ export default {
         @include d-flex-cent;
         height: 100%;
         padding: 10px;
-        line-height: 1px;
-        border-bottom: 3px solid white;
-        transition: border 0.3s;
+       /*  line-height: 1px; */
+       border-bottom: 3px solid white;
+        /* transition: border 0.3s; */
         &.active {
           /* color: $primary; */
-          border-bottom: $primary;
+          border-bottom: 3px solid $primary;
           cursor: pointer;
 
           a {
             color: $primary;
           }
         }
-        a:hover {
+        &:hover {
           border-bottom: $primary;
+        }
+
+        a:hover{
+          border-bottom: $primary
         }
       }
     }

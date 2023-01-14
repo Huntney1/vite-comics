@@ -52,7 +52,6 @@ export default {
 };
 </script>
 
-
 <template>
   <footer>
     <div class="top-footer">
@@ -119,13 +118,13 @@ export default {
             </ul>
           </div>
         </div>
-        <!-- <div class="dc_bg">
+        <!--* <div class="dc_bg">
           <img src="/img/dc-logo-bg.png" alt="dc_logo" />
         </div> -->
       </div>
     </div>
 
-    <!--  <div class="social">
+    <!--*  <div class="social">
       <div class="col-but">
         <button class="footer-button">Sign-up now!</button>
       </div>
