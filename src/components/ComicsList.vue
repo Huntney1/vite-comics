@@ -41,6 +41,7 @@ export default {
 
 .dark {
   background-color: rgb(30, 30, 30);
+  color: #fff;
 }
 
 .upper-title {

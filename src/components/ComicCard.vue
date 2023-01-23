@@ -36,6 +36,7 @@
            width: 100%;
            object-fit: cover;
            object-position: top;
+           
         }
     }
 </style>
